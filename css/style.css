@@ -1,0 +1,45 @@
+@charset "utf-8"
+
+.wrapper {
+  width: 1920px;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+/* ==================header */
+
+.flex-b {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.logo img {
+  width: 136px;
+}
+
+.gnb ul {
+  display: flex;
+}
+
+.gnb li a {
+  margin-left: 90px;
+  padding: 7px 15px;
+  font-size: 20px;
+}
+.gnb li:first-of-type a {
+  margin-left: 65px;
+}
+.topset-nav {
+  display: flex;
+}
+
+.topset-nav {
+  justify-self: end;
+}
+.topset-nav i {
+  font-size: 25px;
+  margin-left: 18px;
+}
