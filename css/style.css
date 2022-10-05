@@ -27,6 +27,9 @@
   height: 60px;
   align-items: center;
 }
+.logo {
+  margin-top: 15px;
+}
 .logo img {
   width: 136px;
 }
@@ -40,11 +43,7 @@
   padding: 7px 15px;
   font-size: 20px;
   font-weight: 700;
-  margin-left: 90px;
-}
-
-.gnb li:first-of-type a {
-  margin-left: 65px;
+  margin-left: 60px;
 }
 
 .topset-nav {
@@ -72,14 +71,14 @@
 
 .h-text-content strong {
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .h-text-content p {
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 42px;
   margin-bottom: 88px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .h-text-content .show-now a {
@@ -128,7 +127,7 @@ main {
 .grid-b {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 13px 30px;
+  grid-gap: 18.5px 30px;
   grid-template-areas:
     "a b"
     "a c";
@@ -215,6 +214,7 @@ main {
 
 .text-content {
   margin-left: 30px;
+  color: #000;
 }
 
 .title-comment {
@@ -235,7 +235,6 @@ main {
 
 .title-comment > span {
   position: relative;
-  /* display: block; */
   margin-right: 20px;
   top: -40px;
   right: 12px;
@@ -334,6 +333,61 @@ main {
 }
 
 /* *****************footer***************** */
-footer{
+footer {
   margin-top: 100px;
+}
+
+.f-top-nav {
+  border-bottom: 3px solid #664033;
+}
+
+.f-top-nav li {
+  display: inline-block;
+  margin-right: 35px;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+.tel {
+  color: #664033;
+}
+
+/* bottom area */
+.f-bottom-area {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.f-left-area {
+  display: flex;
+}
+.f-left-area > .f-logo {
+  margin-right: 20px;
+}
+
+.business-info ul {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+}
+
+.business-info li,
+.copyright {
+  font-weight: 500;
+}
+
+.copyright {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.sns-list li {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 35px;
+  line-height: 0;
+}
+
+.sns-list a {
+  color: #664033;
 }
