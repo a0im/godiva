@@ -1,20 +1,31 @@
-@charset "utf-8"
+@charset "utf-8";
 
 .wrapper {
   width: 1920px;
+  margin: 0 auto;
 }
 
 .container {
+  position: relative;
   width: 1200px;
-  padding: 0 10px;
   margin: 0 auto;
+  padding: 0 10px;
+  /* background: plum; */
 }
+
+.s3 h3,
+.s4 h3 {
+  font-size: 0;
+  position: absolute;
+  right: -9999px;
+}
+
 /* ==================header */
 
 .flex-b {
   display: flex;
-  align-items: center;
   height: 60px;
+  align-items: center;
 }
 .logo img {
   width: 136px;
@@ -25,21 +36,187 @@
 }
 
 .gnb li a {
-  margin-left: 90px;
   padding: 7px 15px;
   font-size: 20px;
+
+  margin-left: 90px;
 }
 .gnb li:first-of-type a {
   margin-left: 65px;
 }
 .topset-nav {
   display: flex;
+  margin-left: auto;
 }
 
-.topset-nav {
-  justify-self: end;
-}
 .topset-nav i {
   font-size: 25px;
   margin-left: 18px;
+}
+
+/* article */
+
+.bg-wrap {
+  height: 590px;
+  background: url("../img/h_배경f.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.h-text-content {
+  position: absolute;
+  top: 110px;
+}
+
+.h-text-content strong {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.h-text-content p {
+  font-size: 20px;
+  margin-top: 42px;
+  margin-bottom: 88px;
+  font-weight: 500;
+}
+
+.h-text-content .show-now a {
+  display: block;
+  width: 125px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 35px;
+  letter-spacing: -1px;
+  background-color: #3b1a0f;
+  color: white;
+}
+
+/* notice */
+
+.notice {
+  width: 100%;
+  height: 60px;
+  background: #3b1a0f;
+}
+
+.notice_flex_box {
+  display: flex;
+  margin: 0 10px;
+  justify-content: space-between;
+  line-height: 60px;
+}
+.notice p a,
+.notice p time {
+  font-size: 14px;
+  color: white;
+}
+.notice p a {
+  margin-right: 10px;
+}
+
+/* ====================main */
+main {
+  margin-top: 125px;
+}
+
+/* s1 */
+.grid-b {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 13px 30px;
+  grid-template-areas:
+    "a b"
+    "a c";
+}
+.biscuit {
+  grid-area: a;
+}
+.latte {
+  grid-area: b;
+}
+.decadence {
+  grid-area: c;
+}
+.grid-b div {
+  position: relative;
+}
+.biscuit span,
+.latte span,
+.decadence span {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  z-index: 1;
+  color: white;
+  font-weight: 700;
+  font-size: 26px;
+}
+.biscuit small,
+.latte small,
+.decadence small {
+  color: #d5d0c8;
+  font-weight: 700;
+}
+
+/* s2 */
+.s2 {
+  margin-top: 125px;
+}
+
+.s2 ul {
+  display: flex;
+}
+
+.s2 li {
+  position: relative;
+  margin-right: 30px;
+}
+
+.food_des {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  color: white;
+}
+.food_des strong {
+  font-size: 20px;
+  font-weight: 700;
+}
+.food_des p:nth-child(2) {
+  font-size: 14px;
+}
+.food_des p:nth-child(3) {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* s3 */
+.s3 {
+  margin-top: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-comment > strong {
+  display: block;
+  text-align: end;
+  font-size: 90px;
+  line-height: 70px;
+  font-weight: 900;
+}
+.title-comment strong::first-line{
+  color: #664033;
+  letter-spacing: 12px;
+}
+
+.title-comment > span{
+  position: relative;
+  display: block;
+  text-align: end;
+  top: 40px;
+  font-size:50px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-top: -100px;
 }
