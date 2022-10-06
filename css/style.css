@@ -411,15 +411,15 @@ main {
 .img-content img:nth-last-of-type(2) {
   right: 120px;
   z-index: 2;
-  transform: rotate(5deg);
   width: 230px;
+  transform: rotate(5deg);
   transform-origin: left bottom;
 }
 .img-content img:nth-last-of-type(3) {
-  width: 230px;
   top: 30px;
   right: 270px;
   z-index: 1;
+  width: 230px;
   transform: rotate(-10deg);
   transform-origin: right bottom;
 }
@@ -444,6 +444,8 @@ main {
 
 /* 🎈내일 체크할것 */
 .s4_title > strong {
+  position: relative; 
+  top: -8px;
   margin-left: 15px;
   font-size: 60px;
   font-weight: 900;
