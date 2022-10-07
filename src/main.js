@@ -5,27 +5,23 @@ const $s3_imgBox = document.querySelector(".img-content");
 const $s3_content = document.querySelector(".text-content");
 const $h_nav = document.querySelector(".logo-gnb-topset");
 const $event_wrap = document.querySelector(".event-wrap");
+const $s2_ul = document.querySelector(".s2-pos-box > ul");
+console.log($s2_ul);
 
 //nav
-function navAddEvt() {
-  console.log("aa");
-  $event_wrap.style.position = "fixed";
-}
-function navRemoveEvt() {
-  console.log("cc");
-  $event_wrap.style.position = "relative";
-}
+let navAddEvt = () => ($event_wrap.style.position = "fixed");
+let navRemoveEvt = () => ($event_wrap.style.position = "relative");
 
 let isEvt_nav = (entries, observer) => {
-  console.log(!entries[0].isIntersecting);
   !entries[0].isIntersecting ? navAddEvt() : navRemoveEvt();
 };
 
 let option2 = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.2,
+  threshold: 0.1,
 };
+
 const observer_nav = new IntersectionObserver(isEvt_nav, option2);
 observer_nav.observe($h_nav);
 
@@ -48,7 +44,7 @@ let isEvt_s3 = (entries, observer) => {
 let option1 = {
   root: null,
   rootMargin: "0px",
-  threshold: 1,
+  threshold: 0.8,
 };
 
 //call

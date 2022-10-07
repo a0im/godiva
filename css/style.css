@@ -12,7 +12,7 @@
   margin: 0 auto;
   padding: 0 10px;
 
-  /* background: plum; */
+  background: plum;
 }
 
 .s3 h3,
@@ -28,7 +28,7 @@
 }
 .event-wrap {
   transition: all 1s ease;
-  position: fixed;
+  position: relative;
   width: 1920px;
   background-color: #fff;
   z-index: 10;
@@ -250,10 +250,20 @@ main {
 
 .s2 {
   margin-top: 125px;
-}
+  height: 440px;
+  width: 100%;
 
+}
+.s2-pos-box{
+  position: absolute;
+  /* overflow: hidden; */
+}
+/* 💋 */
 .s2 ul {
+  transition: left 300ms ease;
   display: flex;
+  position: relative;
+  left: -804px;
 }
 
 .s2 li {
