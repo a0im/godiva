@@ -3,6 +3,7 @@
 .wrapper {
   width: 1920px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .container {
@@ -10,6 +11,7 @@
   width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
+
   /* background: plum; */
 }
 
@@ -21,7 +23,17 @@
 }
 
 /* *****************header***************** */
-
+.logo-gnb-topset {
+  height: 60px;
+}
+.event-wrap {
+  transition: all 1s ease;
+  position: fixed;
+  width: 1920px;
+  background-color: #fff;
+  z-index: 10;
+  transform: scale(1.1);
+}
 .flex-b {
   display: flex;
   height: 60px;
@@ -325,8 +337,7 @@ main {
 }
 
 .title-comment {
-  position: relative;
-  left: 95px;
+  right: 700px;
 }
 
 .title-comment > strong {
@@ -349,6 +360,8 @@ main {
   font-weight: 900;
 }
 
+/* 💄 */
+
 .s3_article {
   text-align: end;
 }
@@ -360,13 +373,15 @@ main {
   font-weight: 800;
   letter-spacing: 3px;
   margin-bottom: 10px;
+  right: 800px;
 }
 
 .s3_article > p {
   font-weight: 700;
   font-size: 18px;
+  right: 800px;
 }
-/* 👿 */
+
 .s3_more {
   display: block;
   width: 110px;
@@ -380,10 +395,12 @@ main {
   font-size: 15px;
   margin-top: 30px;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
-  transition: all 300ms ease;
+  transition: all ease;
+  opacity: 0;
 }
 
 .s3_more:hover {
+  transition-duration: 300ms !important;
   transform: translate(-3px, -3px);
   box-shadow: 7px 7px 3.5px rgba(0, 0, 0, 0.25);
 }
@@ -399,9 +416,10 @@ main {
   top: 0;
   right: 0;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
-  transition: all 300ms ease;
+  transition: all 1.5s ease;
 }
 .img-content img:nth-last-of-type(1) {
+  opacity: 0;
   top: 90px;
   z-index: 3;
   width: 190px;
@@ -409,6 +427,8 @@ main {
   transform-origin: left bottom;
 }
 .img-content img:nth-last-of-type(2) {
+  opacity: 0;
+
   right: 120px;
   z-index: 2;
   width: 230px;
@@ -416,6 +436,8 @@ main {
   transform-origin: left bottom;
 }
 .img-content img:nth-last-of-type(3) {
+  opacity: 0;
+
   top: 30px;
   right: 270px;
   z-index: 1;
@@ -423,14 +445,52 @@ main {
   transform: rotate(-10deg);
   transform-origin: right bottom;
 }
-.img-content:hover img:nth-last-of-type(1) {
+
+/* 👿 */
+/* s3 evnet  */
+.s3_act_img > img:nth-last-of-type(1) {
   transform: rotate(12deg);
+  opacity: 1;
 }
-.img-content:hover img:nth-last-of-type(2) {
+.s3_act_img > img:nth-last-of-type(2) {
   transform: rotate(1deg);
+  opacity: 1;
 }
-.img-content:hover img:nth-last-of-type(3) {
+.s3_act_img > img:nth-last-of-type(3) {
   transform: rotate(-18deg);
+  opacity: 1;
+}
+
+.title-comment,
+.s3_article > strong,
+.s3_article > p {
+  position: relative;
+  transition: all ease;
+}
+
+.title-comment {
+  transition-duration: 1.7s;
+}
+
+.s3_article > strong {
+  transition-duration: 2.5s;
+}
+
+.s3_article > p {
+  transition-duration: 3.2s;
+}
+
+.s3_act_content > .title-comment {
+  right: -95px;
+}
+
+.s3_act_content > .s3_article > strong,
+.s3_act_content > .s3_article > p {
+  right: 0;
+}
+.s3_act_content .s3_more {
+  opacity: 1;
+  transition-duration: 1s;
 }
 
 /* s4 */
@@ -444,7 +504,7 @@ main {
 
 /* 🎈내일 체크할것 */
 .s4_title > strong {
-  position: relative; 
+  position: relative;
   top: -8px;
   margin-left: 15px;
   font-size: 60px;
