@@ -4,7 +4,9 @@ import notice from "../db/notice_title.json " assert { type: "json" };
 //json
 const noticeData = notice.notice;
 // DOM
+const $header = document.querySelector("header");
 const $h_nav = document.querySelector(".logo-gnb-topset");
+const $topBtn = document.querySelector(".topBtn");
 const $eventWrap = document.querySelector(".event-wrap");
 const $noticeBox = document.querySelector(".notice-bundle");
 const $s2_itemList = document.querySelector(".s2-item-list");
@@ -13,8 +15,35 @@ const $s3 = document.querySelector(".s3");
 const $s3_imgBox = document.querySelector(".img-content");
 const $s3_content = document.querySelector(".text-content");
 
-// ================= notice ===================
+// ================= topBtn - 상단이동 , 버튼 숨김/표시 이벤트  ===================
+// 클릭-상단이동 리스너
+$topBtn.addEventListener("click", () => {
+  setTimeout(() => {
+    $h_nav.scrollIntoView({ behavior: "smooth" });
+  }, 400);
+});
 
+// class 추가제거
+function isEvt_arrow(entries) {
+  if (!entries[0].isIntersecting) {
+    $topBtn.classList.add("act-arrow");
+  } else {
+    $topBtn.classList.remove("act-arrow");
+  }
+}
+
+//observer option
+let option3 = {
+  root: null,
+  rootMargin: "250px 0px 0px 0px",
+  threshold: 0,
+};
+
+//create observer obj
+const observer_arrow = new IntersectionObserver(isEvt_arrow, option3);
+observer_arrow.observe($header);
+
+// ================= notice - 공지내용 일정 시간마다 위로 슬라이드 이벤트 ===================
 const eleSize = 60;
 let currIdx = 0;
 let interval = null;
@@ -78,8 +107,8 @@ function toggleInterval($notiEle) {
     });
   });
 }
-// ============= s2 - slide img ================
 
+// ============= s2 - 일정 시간마다 이미지 우측 이동 이벤트 ================
 s2SlideEvnt();
 function s2SlideEvnt() {
   const imgLength = $s2_items.length;
@@ -127,26 +156,27 @@ function s2SlideEvnt() {
   }
 }
 
-//nav
-// ============= nav ================
-let navAddEvt = () => ($eventWrap.style.position = "fixed");
-let navRemoveEvt = () => ($eventWrap.style.position = "relative");
+// ============= nav - nav영역 fixed 이벤트 ================
+// 스타일 변경 함수
+// let navAddEvt = () => ($eventWrap.style.transform = "scale(1.03)");
+// let navRemoveEvt = () => ($eventWrap.style.transform = "scale(1)");
+// let isEvt_nav = (entries, observer) => {
+//   !entries[0].isIntersecting ? navAddEvt() : navRemoveEvt();
+// };
 
-let isEvt_nav = (entries, observer) => {
-  !entries[0].isIntersecting ? navAddEvt() : navRemoveEvt();
-};
+// //Observer option
+// let option2 = {
+//   root: null,
+//   rootMargin: "0px",
+//   threshold: 0.1,
+// };
+// //create observer obj
+// const observer_nav = new IntersectionObserver(isEvt_nav, option2);
+// observer_nav.observe($h_nav);
 
-let option2 = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.1,
-};
+// ============= s3 - 텍스트 슬라이드 이벤트   ================
 
-const observer_nav = new IntersectionObserver(isEvt_nav, option2);
-observer_nav.observe($h_nav);
-
-//s3
-// ============= s3 ================
+//class 추가 제거 함수
 function s3AddClass() {
   $s3_imgBox.classList.add("s3_act_img");
   $s3_content.classList.add("s3_act_content");
@@ -155,19 +185,17 @@ function s3RemoveClass() {
   $s3_imgBox.classList.remove("s3_act_img");
   $s3_content.classList.remove("s3_act_content");
 }
-
-//cb
-let isEvt_s3 = (entries, observer) => {
+let isEvt_s3 = entries => {
   entries[0].isIntersecting ? s3AddClass() : s3RemoveClass();
 };
 
-//root & target option
+//Observer option
 let option1 = {
   root: null,
   rootMargin: "0px",
   threshold: 0.8,
 };
 
-//call
+//create observer obj
 const observer_s3 = new IntersectionObserver(isEvt_s3, option1);
 observer_s3.observe($s3);
