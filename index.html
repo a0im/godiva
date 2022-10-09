@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <script src="https://kit.fontawesome.com/0c997df9c9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="./src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -63,9 +63,8 @@
 
         <div class="notice">
           <div class="container">
-            <div class="notice_flex_box">
-              <p><a href="#">[NOTICE] 화이트 레이어 케이크 프로모션 당첨자 발표... </a> <time> 2022.09.30</time></p>
-              <p><a href="#"> [NEW] 해피데이 케이크 틴 지큐브 어쏘트먼트 출시...</a> <time> 2022.09.30</time></p>
+            <div class="notice-bundle">
+            <!--요소 js에서 생성함 -->
             </div>
           </div>
           <!-- container -->
@@ -79,7 +78,6 @@
             <div class="grid-b">
               <div class="biscuit">
                 <a href="#">
-                  <!-- <img src="./img/s1_꽃.jpg" alt="꽃" /> -->
                   <span>
                     <small>PRESTIGE BISCUIT COLLECTION</small><br />
                     프레스티지 비스킷 컬렉션
@@ -104,7 +102,7 @@
           <section class="s2">
             <h3>NEW & BEST MENU</h3>
             <div class="s2-pos-box">
-              <ul>
+              <ul class="s2-item-list">
                 <li>
                   <a href="#"
                     ><img src="./img/s2_프라푸치노.jpg" alt="초콜렉사" />
@@ -168,49 +166,8 @@
                     </div>
                   </a>
                 </li>
-                <li>
-                  <a href="#"
-                    ><img src="./img/s2_프라푸치노.jpg" alt="초콜렉사" />
-                    <div class="food_des">
-                      <strong> 화이트 초콜렉사</strong>
-                      <p>초콜릿을 직접 갈아만든 리얼 초콜릿 음료</p>
-                      <p>8,000원</p>
-                    </div>
-                    <div class="slide_box_wrap">
-                      <div class="food_des2">
-                        <strong>리얼 초콜릿 음료, 화이트 초콜렉사</strong>
-                        <p>
-                          밀크 초콜릿의 부드러움과 달콤한 맛을<br />
-                          느낄 수 있는 초코릿 음료.<br />
-                          일상의 작은 순간들을 고디바와 함<br />
-                          만나보세요.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="./img/s2_프라푸치노.jpg" alt="초콜렉사" />
-                    <div class="food_des">
-                      <strong> 화이트 초콜렉사</strong>
-                      <p>초콜릿을 직접 갈아만든 리얼 초콜릿 음료</p>
-                      <p>8,000원</p>
-                    </div>
-                    <div class="slide_box_wrap">
-                      <div class="food_des2">
-                        <strong>리얼 초콜릿 음료, 화이트 초콜렉사</strong>
-                        <p>
-                          밀크 초콜릿의 부드러움과 달콤한 맛을<br />
-                          느낄 수 있는 초코릿 음료.<br />
-                          일상의 작은 순간들을 고디바와 함<br />
-                          만나보세요.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
               </ul>
+              <!-- s2-item-list1 -->
             </div>
             <!-- pos-box -->
           </section>

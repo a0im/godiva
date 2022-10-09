@@ -3,7 +3,7 @@
 .wrapper {
   width: 1920px;
   margin: 0 auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container {
@@ -12,7 +12,7 @@
   margin: 0 auto;
   padding: 0 10px;
 
-  background: plum;
+  /* background: plum; */
 }
 
 .s3 h3,
@@ -147,27 +147,43 @@
 /* notice */
 
 .notice {
+  overflow: hidden;
   width: 100%;
   height: 60px;
   background: #3b1a0f;
 }
 
-.notice_flex_box {
+.notice-bundle {
+  position: relative;
+  bottom: 0px;
   display: flex;
+  flex-wrap: wrap;
   margin: 0 10px;
-  justify-content: space-between;
   line-height: 60px;
 }
-.notice p a,
-.notice p time {
-  font-size: 14px;
-  color: white;
+
+.noti-animate {
+  transition: bottom 300ms ease-out;
+}
+.notice p {
+  width: 50%;
+}
+.notice p:nth-child(even) {
+  text-align: end;
 }
 .notice p a {
-  margin-right: 10px;
+  display: inline;
+  padding: 15px;
+  font-size: 14px;
+  color: #fff;
 }
+
 .notice p a:hover {
   text-decoration: underline;
+}
+
+.notice time {
+  padding-left: 10px;
 }
 
 /* *****************main***************** */
@@ -250,20 +266,24 @@ main {
 
 .s2 {
   margin-top: 125px;
-  height: 440px;
   width: 100%;
+}
+.s2-pos-box {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  height: 440px;
+}
 
-}
-.s2-pos-box{
-  position: absolute;
-  /* overflow: hidden; */
-}
 /* 💋 */
 .s2 ul {
-  transition: left 300ms ease;
   display: flex;
-  position: relative;
-  left: -804px;
+  position: absolute;
+
+  left: 0;
+}
+.s2-animate {
+  transition: left 450ms ease-out;
 }
 
 .s2 li {
@@ -369,8 +389,6 @@ main {
   font-size: 60px;
   font-weight: 900;
 }
-
-/* 💄 */
 
 .s3_article {
   text-align: end;
