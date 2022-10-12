@@ -8,15 +8,15 @@ const $header = document.querySelector("header");
 const $h_nav = document.querySelector(".logo-gnb-topset");
 const $h_eventWrap = document.querySelector(".event-wrap");
 const $h_gnbList = document.querySelector(".gnb-list");
-const $a_bgWrap = document.querySelector(".bg-wrap");
 const $topBtn = document.querySelector(".topBtn");
 const $noticeBox = document.querySelector(".notice-bundle");
+const $a_bgWrap = document.querySelector(".bg-wrap");
+const $a_textContent = document.querySelectorAll(".bg-wrap > .container > div");
 const $s2_itemList = document.querySelector(".s2-item-list");
 const $s2_items = document.querySelectorAll(".s2-item-list > li");
 const $s3 = document.querySelector(".s3");
 const $s3_imgBox = document.querySelector(".img-content");
 const $s3_content = document.querySelector(".text-content");
-const $a_textContent = document.querySelectorAll(".bg-wrap > .container > div");
 
 // ================ GNB- gnb slide menu ================
 gnbSildeEvnt();
@@ -227,21 +227,3 @@ let option1 = {
 //create observer obj
 const observer_s3 = new IntersectionObserver(isEvt_s3, option1);
 observer_s3.observe($s3);
-
-// ============= nav - nav영역 fixed 이벤트 ================
-// 스타일 변경 함수
-// let navAddEvt = () => ($eventWrap.style.transform = "scale(1.03)");
-// let navRemoveEvt = () => ($eventWrap.style.transform = "scale(1)");
-// let isEvt_nav = (entries, observer) => {
-//   !entries[0].isIntersecting ? navAddEvt() : navRemoveEvt();
-// };
-
-// //Observer option
-// let option2 = {
-//   root: null,
-//   rootMargin: "0px",
-//   threshold: 0.1,
-// };
-// //create observer obj
-// const observer_nav = new IntersectionObserver(isEvt_nav, option2);
-// observer_nav.observe($h_nav);
