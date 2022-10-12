@@ -87,6 +87,7 @@
 .topset-nav {
   display: flex;
   margin-left: auto;
+  content-visibility: ;
 }
 
 .topset-nav i {
@@ -106,17 +107,19 @@
   background-repeat: no-repeat;
   background-position: center;
   background: url("../img/h-bg3.jpg");
-  transition: background 1s ease;
+  transition: background 1.3s ease-in-out;
 }
 
 .h-text-content,
 .h-text-content2 {
-  transition: opacity 1s ease;
+  transition: opacity 1.7s ease-in-out;
+  transition-delay: 300ms;
 }
 
 .h-text-content {
   position: absolute;
   top: 110px;
+  visibility: hidden;
   opacity: 0;
 }
 
@@ -125,9 +128,11 @@
   top: 140px;
   right: -20px;
   text-align: center;
+  visibility: hidden;
   opacity: 0;
 }
 .act-bg {
+  visibility: visible;
   opacity: 1;
 }
 .h-text-content strong,
@@ -707,12 +712,12 @@ footer {
   margin-bottom: 28px;
   font-weight: 700;
 }
-.f-top-nav li:hover {
+.f-top-nav li a:hover {
   color: #c19a6b;
   text-decoration: underline;
 }
 
-.tel {
+.tel > a {
   color: #664033;
 }
 
