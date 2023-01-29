@@ -316,24 +316,24 @@ main {
 }
 .biscuit a {
   height: 556px;
-  background-image: url(/img/s1_flower.jpg);
+  background-image: url(../img/s1_flower.jpg);
 }
 .biscuit a:hover {
-  background-image: url(/img/s1_flower_hov.jpg);
+  background-image: url(../img/s1_flower_hov.jpg);
 }
 .latte a {
   height: 270px;
-  background: url(/img/s1_latte.jpg);
+  background: url(../img/s1_latte.jpg);
 }
 .latte a:hover {
-  background-image: url(/img/s1_latte_hov.jpg);
+  background-image: url(../img/s1_latte_hov.jpg);
 }
 .decadence a {
   height: 270px;
-  background: url(/img/s1_decadence.jpg);
+  background: url(../img/s1_decadence.jpg);
 }
 .decadence a:hover {
-  background-image: url(/img/s1_decadence_hov.jpg);
+  background-image: url(../img/s1_decadence_hov.jpg);
 }
 
 .biscuit span,
