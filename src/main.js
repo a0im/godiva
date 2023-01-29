@@ -1,8 +1,10 @@
-"use strict";
-import notice from "../db/notice_title.json " assert { type: "json" };
+// import notice from "../db/notice_title.json " assert { type: "json" };
+
+
 
 //json
-const noticeData = notice.notice;
+// const noticeData = notice.notice;
+
 // DOM
 const $header = document.querySelector("header");
 const $h_nav = document.querySelector(".logo-gnb-topset");
@@ -17,6 +19,36 @@ const $s2_items = document.querySelectorAll(".s2-item-list > li");
 const $s3 = document.querySelector(".s3");
 const $s3_imgBox = document.querySelector(".img-content");
 const $s3_content = document.querySelector(".text-content");
+
+
+let noticeData = [
+  {
+    date:"2022.09.30",
+    type:"notice",
+    title:"2022년 추석 연휴 매장 영업시간 안내"},
+  {
+    date:"2022.09.29",
+    type:"notice",
+    title:"고디바 매장별 메뉴 이용 안내"},
+  {
+    date:"2022.09.28",
+    type:"new",
+    title:"2022 고디바X시나모롤 '할로윈 컬렉션' 출시"},
+  {
+    date:"2022.09.27",
+    type:"new",
+    title:"해피데이 케이크 틴 지큐브 어쏘트먼트 출시"},
+  {
+    date:"2022.09.26",
+    type:"new",
+    title:"시즌한정 카카오 프루츠 퍼센티지 출시"},
+  {
+    date:"2022.09.25",
+    type:"new",
+    title:"고디바 시즌한정 '스프링 컬렉션' & '스트로베리 초콜렉사' 출시"
+  }
+]
+
 
 // ================ GNB- gnb slide menu ================
 gnbSildeEvnt();
